@@ -1,0 +1,18 @@
+App.data.PERIODOS = [
+  { n: 1, titulo: "Fundamentos", curto: "Base", optativa: null,
+    resumo: "A base: lógica de programação, visão geral da computação, matemática e administração." },
+  { n: 2, titulo: "Estruturas e objetos", curto: "Estruturas", optativa: null,
+    resumo: "Você aprende a organizar dados e a pensar em objetos. Entram também o cálculo e o hardware digital." },
+  { n: 3, titulo: "Dados e engenharia", curto: "Dados", optativa: null,
+    resumo: "Primeiro contato com banco de dados e engenharia de software: você começa a construir sistemas de verdade." },
+  { n: 4, titulo: "Web e sistemas", curto: "Web", optativa: null,
+    resumo: "Programação web, sistemas operacionais e padrões de projeto. A matemática ganha peso." },
+  { n: 5, titulo: "Arquitetura e redes", curto: "Redes", optativa: "Optativa I",
+    resumo: "Arquiteturas modernas (APIs, DevOps), redes de computadores e estatística. Começam as optativas." },
+  { n: 6, titulo: "Mobile e distribuídos", curto: "Mobile", optativa: "Optativa II",
+    resumo: "Aplicativos móveis, sistemas distribuídos e sistemas de apoio à decisão. Hora de escolher optativas pensando na carreira." },
+  { n: 7, titulo: "IA e pessoas", curto: "IA", optativa: "Optativa III",
+    resumo: "Inteligência artificial, experiência do usuário e gestão de projetos. Começa o TCC." },
+  { n: 8, titulo: "Qualidade e negócio", curto: "Negócio", optativa: "Optativa IV",
+    resumo: "Qualidade de software, empreendedorismo e a defesa do TCC." },
+];
