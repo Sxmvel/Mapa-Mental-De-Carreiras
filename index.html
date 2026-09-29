@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Carreiras SI</title>
+  <meta name="description" content="Mapa interativo do Bacharelado em Sistemas de Informação do IFMG Ouro Branco: períodos, áreas, disciplinas e carreiras.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/board.css">
+  <link rel="stylesheet" href="assets/css/window.css">
+  <link rel="stylesheet" href="assets/css/views.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-key" aria-hidden="true">SI</span>
+      <span class="brand-text">Mapa de Carreiras <span class="muted">· IFMG Ouro Branco</span></span>
+    </div>
+    <nav class="topnav" aria-label="Atalhos">
+      <button class="btn" data-open-view="areas">Áreas</button>
+      <button class="btn btn--accent" data-open-view="carreiras">Carreiras</button>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h1 class="sr-only">Mapa de carreiras do Bacharelado em Sistemas de Informação</h1>
+
+    <div class="path-banner" id="pathBanner" hidden>
+      <span class="path-dot" id="pathDot"></span>
+      <span>Caminho para <strong id="pathName"></strong></span>
+      <button class="link" id="pathDetails">ver trilha</button>
+      <button class="icon-btn" id="pathClear" aria-label="Limpar caminho">×</button>
+    </div>
+
+    <div class="stage">
+      <div class="float">
+        <div class="board" id="board">
+          <div class="plate" aria-hidden="true"></div>
+          <svg class="trail" id="trail" aria-hidden="true">
+            <path class="groove-edge" id="trailEdge"/>
+            <path class="groove" id="trailGroove"/>
+            <path class="rail" id="trailPath"/>
+            <path class="flow" id="trailFlow" pathLength="1000"/>
+          </svg>
+          <div class="case-badge" aria-hidden="true">
+            <span>BSI · IFMG Ouro Branco</span>
+            <span class="led-group"><span class="led"></span>caminho</span>
+          </div>
+        </div>
+      </div>
+      <div class="board-shadow" aria-hidden="true"></div>
+    </div>
+
+    <p class="hint">Clique numa tecla ou aperte <kbd>1</kbd> a <kbd>8</kbd></p>
+  </main>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <section class="window" id="window" role="dialog" aria-modal="true" aria-labelledby="windowTitle" hidden>
+    <h2 class="sr-only" id="windowTitle" tabindex="-1"></h2>
+    <div class="win-tabbar">
+      <div class="lights">
+        <button class="light light--close" id="windowClose" aria-label="Fechar janela"></button>
+        <span class="light light--min" aria-hidden="true"></span>
+        <span class="light light--max" aria-hidden="true"></span>
+      </div>
+      <nav class="tabs" id="winTabs" aria-label="Abas abertas"></nav>
+    </div>
+    <div class="win-toolbar">
+      <button class="nav-btn" id="windowBack" aria-label="Voltar" disabled>←</button>
+      <div class="address">
+        <span class="favicon" aria-hidden="true">SI</span>
+        <span class="scheme">bsi://</span>
+        <ol class="crumbs" id="winCrumbs" aria-label="Caminho no mapa"></ol>
+      </div>
+    </div>
+    <div class="window-body" id="windowBody"></div>
+    <div class="win-status">
+      <span><span class="status-dot"></span>PPC 2022 · <span id="statusCounts"></span></span>
+      <span id="statusPath"></span>
+    </div>
+  </section>
+
+  <script src="assets/js/app.js"></script>
+
+  <script src="assets/js/data/curso.js"></script>
+  <script src="assets/js/data/areas.js"></script>
+  <script src="assets/js/data/periodos.js"></script>
+  <script src="assets/js/data/disciplinas.js"></script>
+  <script src="assets/js/data/carreiras.js"></script>
+
+  <script src="assets/js/core/utils.js"></script>
+  <script src="assets/js/core/catalog.js"></script>
+
+  <script src="assets/js/components/ui.js"></script>
+  <script src="assets/js/components/board.js"></script>
+  <script src="assets/js/components/path.js"></script>
+  <script src="assets/js/components/window.js"></script>
+
+  <script src="assets/js/views/inicio.js"></script>
+  <script src="assets/js/views/periodo.js"></script>
+  <script src="assets/js/views/carreiras.js"></script>
+  <script src="assets/js/views/carreira.js"></script>
+  <script src="assets/js/views/areas.js"></script>
+  <script src="assets/js/views/optativas.js"></script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
